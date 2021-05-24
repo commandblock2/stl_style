@@ -7,15 +7,10 @@
  * version 3 as published by the Free Software Foundation. 
  * 
  * stl_style is distributed WITHOUT ANY WARRANTY; without even the implied
- * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR  PURPOSE. For
+ * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  */
+#ifndef MAIN
+#define MAIN
 
-#include <stdio.h>
-#include <stdlib.h>
-
-int main(int argc, char *argv[])
-{
-    puts("Hello, World!");
-    return 0;
-}
+#endif
