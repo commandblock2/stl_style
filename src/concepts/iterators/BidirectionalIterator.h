@@ -11,6 +11,16 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  */
 
-#include "main.hpp"
+#ifndef BIDIRECTIONALITERATOR
+#define BIDIRECTIONALITERATOR
 
-int main() {}
+typedef struct BidirectionalIterator
+{
+    
+    void* (*dereference) (void *this_, void *closure);
+    void* (*next) (void *this_, void *closure);
+    void* (*prev) (void *this_, void *closure);
+    
+} iBidirectionalIterator;
+
+#endif

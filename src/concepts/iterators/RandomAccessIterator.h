@@ -11,6 +11,20 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  */
 
-#include "main.hpp"
+#ifndef RANDOMACCESSITERATOR
+#define RANDOMACCESSITERATOR
 
-int main() {}
+#include "../../concepts/other/LessThanComparable.h"
+
+typedef struct RandomAccessIterator
+{
+    
+    void* (*dereference) (void *this_, void *closure);
+    void* (*next) (void *this_, void *closure);
+    void* (*prev) (void *this_, void *closure);
+    
+    iLessThanComparable *less_than_comparable;
+    
+} iRandomAccessIterator;
+
+#endif

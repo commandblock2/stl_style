@@ -11,6 +11,12 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  */
 
-#include "main.hpp"
+#ifndef LESSTHANCOMPARABLE
+#define LESSTHANCOMPARABLE
 
-int main() {}
+typedef struct LessThanComparable
+{
+    int (*less_than) (void *lhs, void *rhs);
+} iLessThanComparable;
+
+#endif
