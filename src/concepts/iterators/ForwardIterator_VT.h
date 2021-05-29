@@ -11,14 +11,14 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  */
 
-#ifndef FORWARDITERATOR
-#define FORWARDITERATOR
+#ifndef FORWARDITERATOR_VT
+#define FORWARDITERATOR_VT
 
-typedef struct ForwardIterator
+#include "../../type/typedefs.h"
+
+typedef struct ForwardIterator_VT
 {
-    
-    void* (*dereference) (void *this_, void *closure);
-    void* (*next) (void *this_, void *closure);
+    generic_iterator (*next) (generic_iterator this_, arbitrary_type_ptr closure);
     
 } iForwardIterator;
 

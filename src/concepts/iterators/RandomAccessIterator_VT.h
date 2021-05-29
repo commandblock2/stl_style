@@ -11,18 +11,16 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  */
 
-#ifndef RANDOMACCESSITERATOR
-#define RANDOMACCESSITERATOR
+#ifndef RANDOMACCESSITERATOR_VT
+#define RANDOMACCESSITERATOR_VT
 
-#include "../../concepts/other/LessThanComparable.h"
+#include "../../concepts/other/LessThanComparable_VT.h"
+#include "../../concepts/iterators/BidirectionalIterator_VT.h"
 
-typedef struct RandomAccessIterator
+typedef struct RandomAccessIterator_VT
 {
     
-    void* (*dereference) (void *this_, void *closure);
-    void* (*next) (void *this_, void *closure);
-    void* (*prev) (void *this_, void *closure);
-    
+    iBidirectionalIterator *bidrectional_iterator;
     iLessThanComparable *less_than_comparable;
     
 } iRandomAccessIterator;

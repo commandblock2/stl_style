@@ -11,14 +11,14 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  */
 
-#include <stdio.h>
-#include <stdlib.h>
+#ifndef EQUALITYCOMPARABLE_VT
+#define EQUALITYCOMPARABLE_VT
 
-#include "concepts/containers/Container_VT.h"
+#include "../../type/typedefs.h"
 
-/*int main(int argc, char *argv[])
+typedef struct EqualityComparable_VT
 {
-    puts("Hello, World!");
-    return 0;
-}
-*/
+    bool (*less_than) (void *lhs, void *rhs);
+} iEqualityComparable;
+
+#endif

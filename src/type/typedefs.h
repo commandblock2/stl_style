@@ -11,14 +11,18 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  */
 
-#include <stdio.h>
-#include <stdlib.h>
+#ifndef TYPEDEFS
+#define TYPEDEFS
 
-#include "concepts/containers/Container_VT.h"
+#ifndef __cplusplus
 
-/*int main(int argc, char *argv[])
-{
-    puts("Hello, World!");
-    return 0;
-}
-*/
+typedef int bool;
+#define nullptr ((void*)0)
+
+#endif
+
+typedef void* generic_reference;
+typedef void* generic_iterator;
+typedef void* arbitrary_type_ptr;
+
+#endif

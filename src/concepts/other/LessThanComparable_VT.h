@@ -11,16 +11,14 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  */
 
-#ifndef BIDIRECTIONALITERATOR
-#define BIDIRECTIONALITERATOR
+#ifndef LESSTHANCOMPARABLE_VT
+#define LESSTHANCOMPARABLE_VT
 
-typedef struct BidirectionalIterator
+#include "../../type/typedefs.h"
+
+typedef struct LessThanComparable_VT
 {
-    
-    void* (*dereference) (void *this_, void *closure);
-    void* (*next) (void *this_, void *closure);
-    void* (*prev) (void *this_, void *closure);
-    
-} iBidirectionalIterator;
+    bool (*less_than) (arbitrary_type_ptr lhs, arbitrary_type_ptr rhs);
+} iLessThanComparable;
 
 #endif
